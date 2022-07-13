@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Generate SA ID Numbers</title>
+
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h3>Generate (Fake) South-African ID Numbers</h1>
+
+    <div class="row">
+      <div class="col-xs-12">
+
+      <form id="f1" name="f1" onsubmit="showIdNumber(); return false">
+
+        <div class="input-group col-xs-12">
+          <label for="year">Year of Birth</label>
+          <select class="form-control" id="year" name="year"></select>
+        </div>
+        <div class="input-group col-xs-12">
+          <label for="month">Month of Birth</label>
+          <select class="form-control" id="month" name="month"></select>
+        </div>
+        <div class="input-group col-xs-12">
+          <label for="day">Day of Birth</label>
+          <select class="form-control" id="day" name="day"></select>
+        </div>
+        <div class="input-group col-xs-12">
+          <input type="radio" name="gender" id="female" value="4" checked="checked" />
+          <label for="female">Female</label>
+          <br/>
+          <input type="radio" name="gender" id="male" value="5" />
+          <label for="male">Male</label>
+        </div>
+
+        <div id="showExpertOptions">
+          <a href="#" onclick="showExpertOptions()">Show expert options</a>
+        </div>
+        <div style="display: none;" id="expertOptions">
+          <div class="input-group col-xs-12">
+            <label for="sequence">Sequence</label>
+            <select class="form-control" id="sequence" name="sequence"></select>
+          </div>
+          <div class="input-group col-xs-12">
+            <input type="radio" name="cship" id="citizen" value="0" checked="checked" />
+            <label for="citizen">Citizen</label>
+            <br/>
+            <input type="radio" name="cship" id="resident" value="1" />
+            <label for="resident">Resident</label>
+          </div>
+        </div>
+
+        <input class="btn btn-primary" type="submit" />
+
+      </form>
+
+      <h3>Result</h3>
+
+      <div id="result">Hint: submit the form to get an ID number.</div>
+
+        <h3>More Information</h3>
+
+        <p>See <a href="https://en.wikipedia.org/wiki/National_identification_number#South_Africa">Wikipedia</a>
+        </p>
+        <p>
+          Read <a href="https://github.com/vusizani/GenerateSouthAfricanID.git">the code</a>.
+        </p>
+
+    </div>
+  </div>
+
+  <script src="./test.js"> </script>
+
+</body>
+</html>
